@@ -14,13 +14,19 @@ header {
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
+    margin: auto;
+    height: auto;
+    text-align: center;
     background-color:rgb(28, 91, 91);
 }
 
 nav li {
-    display: inline;
+    
     margin: 10px;
+}
+nav li:hover {
+    border: 1px solid rgb(244, 247, 248);
 }
 
 nav a {
@@ -29,35 +35,62 @@ nav a {
 }
 
 main {
-    height: 80vh;
-    display: flex;
-    justify-content: space-between;
+    height: 80vh; 
     padding: 20px;
     background-color: #fff;
 }
 img{
-    max-width: 20%;
+    max-width: 40%;
 }
 a{
     text-decoration: none;
-    color:rgb(18, 185, 185);
+    color:#ffffff;
 }
 aside {
     width: 25%;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    background-image: linear-gradient(to top left, black, aqua);
     padding: 10px;
 }
 table{
     padding: 10%;
     width: 80%;
     border-collapse: collapse;
+    
 }
 table, tr,th, td{
-    border: 1px solid;
+    border: 1px solid rgb(1, 61, 61);
+    
 }
 footer {
     text-align: center;
     background-image: linear-gradient(to top left, black, aqua);
     color: #fff;
     padding: 10px;
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    nav li{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width:769px) and (max-width: 992px) {
+    main{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav li{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 993px) {
+    main{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav li{
+        display: inline;
+    }
 }

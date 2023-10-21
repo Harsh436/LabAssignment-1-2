@@ -14,13 +14,18 @@ header {
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
+    margin: auto;
+    height: auto;
+    text-align: center;
     background-color:rgb(28, 91, 91);
 }
 
 nav li {
-    display: inline;
     margin: 10px;
+}
+nav li:hover {
+    border: 1px solid rgb(244, 247, 248);
 }
 
 nav a {
@@ -32,22 +37,89 @@ main {
     height: 80vh;
     padding: 20px;
     background-color: #fff;
-    display: flex;
-    justify-content: space-between;
 }
-
+section{
+    width: 70%;
+}
 aside {
     width: 25%;
-    background-color: #f0f0f0;
+    background-image: linear-gradient(to top left, black, aqua);
     padding: 10px;
 }
 a{
     text-decoration: none;
-    color:rgb(18, 185, 185);
+    color: #ffffff;
 }
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=phone], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+    width: 100%;
+    background-color: rgb(17, 208, 208);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #12deed;
+  }
 footer {
     text-align: center;
-    background-image: linear-gradient(to top left, black, aqua);
+    background-image: linear-gradient(to top left, black, rgb(0, 255, 255));
     color: #fff;
     padding: 10px;
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    nav li{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width:769px) and (max-width: 992px) {
+    main{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav li{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 993px) {
+    main{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav li{
+        display: inline;
+    }
 }
